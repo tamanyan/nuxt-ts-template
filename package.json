@@ -10,7 +10,8 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .ts,.js,.vue --ignore-path .eslintignore ."
+    "lint": "eslint --ext .ts,.js,.vue --ignore-path .eslintignore .",
+    "lint:fix": "eslint --ext .ts,.js,.vue --ignore-path .eslintignore . --fix"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.5.4",
