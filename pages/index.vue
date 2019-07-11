@@ -22,14 +22,27 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import { State, Action, Getter } from 'vuex-class'
 import Logo from '~/components/Logo.vue'
+import { ReserveListState } from '~/store/reserveList/types'
+
+const namespace: string = 'reserveList'
 
 @Component({
   components: {
     Logo
   }
 })
-export default class Index extends Vue {}
+export default class Index extends Vue {
+
+  @State('profile') reserveList!: ReserveListState
+
+  @Action('fetchData', { namespace }) fetchData: any
+
+  mounted() {
+    this.fetchData()
+  }
+}
 </script>
 
 <style>

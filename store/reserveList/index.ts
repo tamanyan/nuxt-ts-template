@@ -13,7 +13,7 @@ export const state: ReserveListState = {
 
 const namespaced: boolean = true
 
-export const profile: Module<ReserveListState, RootState> = {
+export const reserveList: Module<ReserveListState, RootState> = {
   namespaced,
   state,
   getters,

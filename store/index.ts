@@ -7,6 +7,7 @@
 
 import { Store, StoreOptions } from 'vuex'
 import { RootState } from './types'
+import { reserveList } from './reserveList'
 
 const storeOptions: StoreOptions<RootState> = {
   state: {
@@ -16,7 +17,9 @@ const storeOptions: StoreOptions<RootState> = {
     // nuxtServerInit({ commit }, { app }) {
     // }
   },
-  modules: {}
+  modules: {
+    reserveList
+  }
 }
 
 export default () => new Store<RootState>(storeOptions)
