@@ -61,6 +61,10 @@ typings/
 .next
 
 # distribution
-dist
+dist/*.js
+dist/**/*.js
+dist/**/**/*.js
 
-.nuxt
+static/*.js
+
+jest.config.js
